@@ -7,21 +7,17 @@ import com.example.application.model.Receta;
 import com.example.application.service.RecetaService;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
-import org.vaadin.lineawesome.LineAwesomeIconUrl;
 import com.vaadin.flow.router.PageTitle;
-import com.vaadin.flow.router.Menu;
 
 import java.util.List;
 
-@PageTitle("Recetas de 🍰 Postres")
+@PageTitle("🍰 Recetas de  Postres")
 @Route("postre")
-@Menu(order = 2, icon = LineAwesomeIconUrl.FILE)
 public class PostreView extends VerticalLayout {
 
     public PostreView() {
@@ -30,14 +26,10 @@ public class PostreView extends VerticalLayout {
         setPadding(true);
         setSpacing(true);
 
-        
-
-
-
 
         // SERVICE
         RecetaService service = new RecetaService();
-        List<Receta> recetas = service.obtenerPorCategoria("Carne");
+        List<Receta> recetas = service.obtenerPorCategoria("Postre");
 
         // CONTENEDOR PRINCIPAL
         VerticalLayout contenedor = new VerticalLayout();

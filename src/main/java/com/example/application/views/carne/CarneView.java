@@ -6,21 +6,19 @@ import com.example.application.model.Receta;
 import com.example.application.service.RecetaService;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
-import org.vaadin.lineawesome.LineAwesomeIconUrl;
 import com.vaadin.flow.router.PageTitle;
-import com.vaadin.flow.router.Menu;
+
 
 import java.util.List;
 
-@PageTitle("Recetas Carnivoras")
+@PageTitle("🍖 Recetas Carnivoras")
 @Route("carne")
-@Menu(order = 1, icon = LineAwesomeIconUrl.FILE)
+
 
 public class CarneView extends VerticalLayout {
 
@@ -28,11 +26,6 @@ public class CarneView extends VerticalLayout {
         // CONFIGURACIÓN
         setPadding(true);
         setSpacing(true);
-
-        // TITULO
-        H1 titulo = new H1("🍖 Recetas Carnivoras");
-
-
 
 
         // SERVICE
@@ -69,7 +62,7 @@ public class CarneView extends VerticalLayout {
             getUI().ifPresent(ui -> ui.navigate(""));
         });
 
-        add(titulo, contenedor, volver);
+        add(contenedor, volver);
     }
 
     // MÉTODO PARA CREAR TARJETAS

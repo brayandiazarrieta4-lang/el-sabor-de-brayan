@@ -4,29 +4,25 @@ import com.example.application.model.Receta;
 import com.example.application.service.RecetaService;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.vaadin.lineawesome.LineAwesomeIconUrl;
+
 
 import java.util.List;
 
 @PageTitle("💪 Recetas Fitness")
 @Route("fitness")
-@Menu(order = 4, icon = LineAwesomeIconUrl.DUMBBELL_SOLID)
+
 public class FitnessView extends VerticalLayout {
 
     public FitnessView() {
         setPadding(true);
         setSpacing(true);
-
-       
 
         RecetaService service = new RecetaService();
         List<Receta> recetas = service.obtenerPorCategoria("Fitness");

@@ -18,7 +18,7 @@ public class RecetaFitness extends Receta implements Mostrable {
     // METODOS
     @Override
     public String getCategoria() {
-        return "Carne";
+        return "Fitness";
     }
 
     @Override

@@ -69,11 +69,11 @@ public class MenuView extends VerticalLayout {
 
         //COMBOBOX
         ComboBox<String> categorias = new ComboBox<>("Categoría");
-        categorias.setItems("Carne", "Postre", "Vegetariana");
+        categorias.setItems("Carne", "Postre", "Vegetariana","Fitness");
         categorias.setPlaceholder("Elige una opción");
         categorias.setWidth("280px");
 
-        // 🔘 BOTÓN
+        //BOTÓN
         Button continuar = new Button("Continuar", e -> {
 
             String seleccion = categorias.getValue();
@@ -93,6 +93,9 @@ public class MenuView extends VerticalLayout {
                 case "Vegetariana":
                     getUI().ifPresent(ui -> ui.navigate("vegetariana"));
                     break;
+                case "Fitness":
+                    getUI().ifPresent(ui -> ui.navigate("fitness"));
+                    break;
             }
         });
 
@@ -109,7 +112,7 @@ public class MenuView extends VerticalLayout {
         acciones.setAlignItems(Alignment.CENTER);
         acciones.setSpacing(true);
 
-        // AGREGAR TODO
+        // AGREGAR
         contenido.add(titulo, imagen, descripcion, subtitulo, acciones);
 
         add(contenido);

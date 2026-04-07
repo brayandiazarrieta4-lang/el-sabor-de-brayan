@@ -8,21 +8,17 @@ import com.example.application.model.Receta;
 import com.example.application.service.RecetaService;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
-import org.vaadin.lineawesome.LineAwesomeIconUrl;
 import com.vaadin.flow.router.PageTitle;
-import com.vaadin.flow.router.Menu;
 
 import java.util.List;
 
 @PageTitle("🥗 Recetas Vegetarianas")
 @Route("vegetariana")
-@Menu(order = 3, icon = LineAwesomeIconUrl.FILE)
 public class VegetarianaView extends VerticalLayout {
 
     public VegetarianaView() {
@@ -39,7 +35,7 @@ public class VegetarianaView extends VerticalLayout {
 
         // SERVICE
         RecetaService service = new RecetaService();
-        List<Receta> recetas = service.obtenerPorCategoria("Carne");
+        List<Receta> recetas = service.obtenerPorCategoria("Vegetariana");
 
         // CONTENEDOR PRINCIPAL
         VerticalLayout contenedor = new VerticalLayout();
