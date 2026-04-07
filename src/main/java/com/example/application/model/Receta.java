@@ -7,6 +7,7 @@ public abstract class Receta {
 
     // ATRIBUTOS
     private int id;
+    private String imagen;
     private String nombre;
     private String origen;
     private int tiempo;
@@ -33,8 +34,17 @@ public abstract class Receta {
         this.origen = origen;
         this.tiempo = tiempo;
     }
+ 
 
     // GETTER Y SETTER ID
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 
     public int getId() {
         return id;
